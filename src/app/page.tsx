@@ -45,7 +45,7 @@ export default function LandingPage() {
               Sign In
             </Link>
             <Link
-              href="https://gumroad.com"
+              href="https://apollosolal.gumroad.com/l/shipkit-pro"
               target="_blank"
               className="px-3 py-1.5 rounded bg-zinc-100 text-zinc-900 hover:bg-white font-medium transition flex items-center gap-1.5"
             >
@@ -137,7 +137,7 @@ export default function LandingPage() {
             </p>
           </div>
           <Link
-            href="https://gumroad.com"
+            href="https://apollosolal.gumroad.com/l/shipkit-pro"
             target="_blank"
             className="px-4 py-2 rounded bg-zinc-100 hover:bg-white text-zinc-900 font-semibold text-xs transition whitespace-nowrap flex items-center gap-2 shrink-0"
           >

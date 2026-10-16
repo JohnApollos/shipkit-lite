@@ -31,7 +31,7 @@ export default async function DashboardPage() {
         </div>
 
         <Link
-          href="https://gumroad.com"
+          href="https://apollosolal.gumroad.com/l/shipkit-pro"
           target="_blank"
           className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold text-sm transition shadow-lg flex items-center gap-2 whitespace-nowrap"
         >

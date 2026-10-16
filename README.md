@@ -21,7 +21,7 @@ ShipKit Lite provides the essential architecture you need to launch a modern web
 
 ShipKit Lite is intentionally kept lean. If you want to accept recurring subscriptions, handle automated plan upgrades, and deploy to production immediately, upgrade to **ShipKit Pro ($29)**:
 
-👉 **[Get ShipKit Pro on Gumroad ($29)](https://gumroad.com/l/shipkit-pro)**
+👉 **[Get ShipKit Pro on Gumroad ($29)](https://apollosolal.gumroad.com/l/shipkit-pro)**
 
 ### What is included in ShipKit Pro ($29)?
 - 💳 **Complete Stripe Subscriptions:** Pre-built Checkout Sessions and Customer Billing Portal.
@@ -69,4 +69,4 @@ Open [http://localhost:3000](http://localhost:3000) to view your application.
 
 ## 📄 License
 MIT License. Free to use for personal and commercial projects.
-For the full commercial SaaS boilerplate with Stripe billing, see [ShipKit Pro](https://gumroad.com/l/shipkit-pro).
+For the full commercial SaaS boilerplate with Stripe billing, see [ShipKit Pro](https://apollosolal.gumroad.com/l/shipkit-pro).
