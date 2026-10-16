@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
-import { LayoutDashboard, Settings, LogOut, Sparkles } from "lucide-react";
+import { LayoutDashboard, Settings, LogOut, ArrowUpRight } from "lucide-react";
 
 export default async function DashboardLayout({
   children,
@@ -25,60 +25,59 @@ export default async function DashboardLayout({
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 flex flex-col md:flex-row">
-      <aside className="w-full md:w-64 bg-slate-900/60 border-r border-slate-800 p-6 flex flex-col justify-between">
+    <div className="min-h-screen bg-[#09090b] text-[#f4f4f5] flex flex-col md:flex-row">
+      {/* Sidebar */}
+      <aside className="w-full md:w-60 bg-[#0c0c0e] border-r border-zinc-800 p-5 flex flex-col justify-between">
         <div>
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-9 h-9 rounded-xl bg-brand-600 flex items-center justify-center font-bold text-white shadow-lg">
-              S
-            </div>
-            <div>
-              <span className="font-bold text-lg text-white tracking-tight">ShipKit Lite</span>
-              <span className="block text-[10px] text-amber-400 font-mono">Free Edition</span>
-            </div>
+          <div className="flex items-center justify-between mb-8 pb-4 border-b border-zinc-800/80">
+            <Link href="/" className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block" />
+              <span className="font-mono font-bold text-xs tracking-wider text-white">SHIPKIT</span>
+            </Link>
+            <span className="text-[10px] font-mono text-zinc-500 border border-zinc-800 px-1 rounded">Lite</span>
           </div>
 
-          <nav className="space-y-1">
+          <nav className="space-y-1 font-mono text-xs">
             <Link
               href="/dashboard"
-              className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-slate-800/80 transition"
+              className="flex items-center gap-2.5 px-3 py-2 rounded text-zinc-300 hover:text-white hover:bg-zinc-850 transition"
             >
-              <LayoutDashboard className="w-4 h-4 text-brand-400" />
+              <LayoutDashboard className="w-3.5 h-3.5 text-zinc-400" />
               Overview
             </Link>
             <Link
               href="/dashboard/settings"
-              className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-slate-800/80 transition"
+              className="flex items-center gap-2.5 px-3 py-2 rounded text-zinc-300 hover:text-white hover:bg-zinc-850 transition"
             >
-              <Settings className="w-4 h-4 text-slate-400" />
+              <Settings className="w-3.5 h-3.5 text-zinc-400" />
               Settings
             </Link>
           </nav>
 
           {/* Upgrade Card in Sidebar */}
-          <div className="mt-8 p-4 rounded-xl bg-gradient-to-br from-amber-500/10 to-orange-500/10 border border-amber-500/20">
-            <div className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-1 flex items-center gap-1">
-              <Sparkles className="w-3.5 h-3.5" /> Need Stripe?
+          <div className="mt-8 p-4 rounded-lg border border-zinc-800 bg-[#121215]">
+            <div className="text-[10px] font-mono font-semibold text-zinc-400 uppercase tracking-wider mb-1">
+              PRO UPGRADE
             </div>
-            <p className="text-xs text-slate-400 mb-3">
-              Unlock recurring billing, customer portal & webhooks.
+            <p className="text-xs text-zinc-400 mb-3 leading-relaxed">
+              Unlock Stripe Subscriptions, automated webhooks, and Docker configs.
             </p>
             <a
-              href="https://gumroad.com"
+              href="https://apollosolal.gumroad.com/l/shipkit-pro"
               target="_blank"
-              className="block w-full py-1.5 px-3 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold text-center transition"
+              className="w-full py-2 px-3 rounded bg-white hover:bg-zinc-200 text-zinc-950 text-xs font-semibold text-center transition flex items-center justify-center gap-1 shadow-sm"
             >
-              Upgrade ($29)
+              Upgrade ($29) <ArrowUpRight className="w-3 h-3" />
             </a>
           </div>
         </div>
 
-        <div className="pt-6 border-t border-slate-800">
-          <p className="text-xs font-semibold text-white truncate mb-4">{user.email}</p>
+        <div className="pt-4 border-t border-zinc-800">
+          <p className="text-[11px] font-mono text-zinc-300 truncate mb-3">{user.email}</p>
           <form action={signOut}>
             <button
               type="submit"
-              className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium text-slate-400 hover:text-white hover:bg-slate-800 transition"
+              className="w-full flex items-center gap-2 px-2.5 py-1.5 rounded text-xs font-mono text-zinc-500 hover:text-zinc-200 hover:bg-zinc-850 transition"
             >
               <LogOut className="w-3.5 h-3.5" />
               Sign Out

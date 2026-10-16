@@ -9,12 +9,15 @@ const config: Config = {
   darkMode: "class",
   theme: {
     extend: {
-      colors: {
+        colors: {
         background: "#09090b",
         foreground: "#fafafa",
         card: "#121215",
         "card-border": "#27272a",
         muted: "#71717a",
+        zinc: {
+          850: "#141418",
+        },
       },
       fontFamily: {
         mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "monospace"],
